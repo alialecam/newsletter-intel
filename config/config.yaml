@@ -1,0 +1,47 @@
+schedule:
+  # How often to run the aggregation (in days)
+  cadence_days: 3
+
+gmail:
+  # Primary: fetch from known newsletter senders
+  sender_query: >
+    from:(lenny+how-i-ai@substack.com OR 
+    ai.plus@axios.com OR 
+    bigtechnology@substack.com OR 
+    tbpn+run-of-show@substack.com OR 
+    superhuman@mail.joinsuperhuman.ai OR 
+    lenny@substack.com OR 
+    email@stratechery.com OR 
+    noahpinion@substack.com OR 
+    newsletter@techmeme.com OR 
+    casey@platformer.news OR 
+    list@ben-evans.com OR 
+    notboring@substack.com OR 
+    dan@tldrnewsletter.com OR 
+    thecode@mail.joinsuperhuman.ai)
+  
+  # Secondary: also fetch anything manually added to this Gmail label
+  # This allows adding new sources without code changes
+  label: "newsletters"
+
+claude:
+  # Model name for Shopify AI Proxy (anthropic: prefix not needed)
+  model: "claude-sonnet-4-20250514"
+  max_tokens: 4096
+
+slack:
+  # Channel to post summaries (set via SLACK_CHANNEL_ID env var)
+  # Unfurling is disabled to prevent preview cards
+  unfurl_links: false
+  unfurl_media: false
+
+output:
+  # Archive summaries as markdown files
+  archive_summaries: true
+  archive_path: "./output/summaries"
+
+# Brands to always highlight (case-insensitive)
+highlight_brands:
+  - "Shopify"
+  - "Shop Pay"
+  - "Shop"

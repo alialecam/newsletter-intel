@@ -1,0 +1,96 @@
+You are analyzing a batch of newsletter content for Shopify's Communications team. Your goal is to identify themes, surface Shopify mentions, and suggest trend-jacking opportunities.
+
+CRITICAL RULES:
+1. ONLY extract information that is EXPLICITLY present in the source material
+2. NEVER hallucinate, invent, or infer content that isn't directly stated
+3. Every claim must have a source attribution
+4. Quotes must be exact - do not paraphrase and call it a quote
+5. If uncertain whether something was mentioned, DO NOT include it
+
+ANALYZE THE FOLLOWING NEWSLETTER CONTENT:
+
+{content}
+
+---
+
+Provide your analysis as JSON with this exact structure:
+
+{
+  "date_range": {
+    "start": "YYYY-MM-DD",
+    "end": "YYYY-MM-DD"
+  },
+  "themes": [
+    {
+      "title": "Theme title (concise)",
+      "mention_count": 3,
+      "summary": "2-3 sentence summary explaining the narrative arc and why it matters. What's the 'so what' for someone tracking this space?",
+      "sources": [
+        {
+          "name": "Newsletter Name",
+          "url": "https://...",
+          "context": "Brief note on how this source covered the theme"
+        }
+      ]
+    }
+  ],
+  "shopify_mentions": [
+    {
+      "source_name": "Newsletter Name",
+      "source_url": "https://...",
+      "context": "Full context of how Shopify was mentioned (2-3 sentences)",
+      "sentiment": "positive|neutral|negative",
+      "quote": "Exact quote if available, otherwise null"
+    }
+  ],
+  "notable_quotes": [
+    {
+      "quote": "Exact quote text",
+      "author": "Author name",
+      "source_name": "Newsletter Name",
+      "source_url": "https://...",
+      "relevance": "Why this quote is notable"
+    }
+  ],
+  "trend_jack_opportunities": [
+    {
+      "theme": "Theme name",
+      "opportunity": "What Shopify could say or position",
+      "angle": "Specific angle or narrative hook",
+      "best_outlet": "Recommended media outlet (newsletter, podcast, publication)",
+      "outlet_rationale": "Why this outlet is the right fit for this message"
+    }
+  ],
+  "people_mentioned": [
+    {
+      "name": "Person Name",
+      "mention_count": 2,
+      "context": "Why they were mentioned",
+      "sources": ["Source 1", "Source 2"]
+    }
+  ],
+  "companies_mentioned": [
+    {
+      "name": "Company Name",
+      "mention_count": 3,
+      "context": "Why they were mentioned",
+      "sources": ["Source 1", "Source 2"]
+    }
+  ],
+  "sources_processed": [
+    {
+      "name": "Newsletter Name",
+      "url": "https://...",
+      "date": "YYYY-MM-DD",
+      "subject": "Email subject line"
+    }
+  ]
+}
+
+IMPORTANT:
+- Include ALL Shopify mentions, even if there's only one
+- Provide exactly 2-3 trend-jack opportunities
+- Theme summaries must be 2-3 sentences, not bullet points
+- For trend-jack outlets, consider: newsletters (Stratechery, Big Technology, Platformer, Lenny's), podcasts, traditional media
+- Sort themes by mention_count (highest first)
+- Only include people/companies mentioned 2+ times across sources

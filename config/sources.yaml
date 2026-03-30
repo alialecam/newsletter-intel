@@ -1,0 +1,74 @@
+# Newsletter sources with metadata
+# These are used for display names and categorization
+# Adding an email here does NOT add it to fetching - update config.yaml sender_query for that
+
+sources:
+  - name: "Lenny's Newsletter"
+    email: "lenny@substack.com"
+    category: "product"
+    url: "https://www.lennysnewsletter.com/"
+    
+  - name: "Lenny's How I AI"
+    email: "lenny+how-i-ai@substack.com"
+    category: "ai"
+    url: "https://www.lennysnewsletter.com/"
+
+  - name: "Stratechery"
+    email: "email@stratechery.com"
+    category: "tech-strategy"
+    url: "https://stratechery.com/"
+
+  - name: "Big Technology"
+    email: "bigtechnology@substack.com"
+    category: "tech-business"
+    url: "https://www.bigtechnology.com/"
+
+  - name: "Platformer"
+    email: "casey@platformer.news"
+    category: "tech-policy"
+    url: "https://www.platformer.news/"
+
+  - name: "Noahpinion"
+    email: "noahpinion@substack.com"
+    category: "economics"
+    url: "https://www.noahpinion.blog/"
+
+  - name: "Benedict Evans"
+    email: "list@ben-evans.com"
+    category: "tech-strategy"
+    url: "https://www.ben-evans.com/"
+
+  - name: "Not Boring"
+    email: "notboring@substack.com"
+    category: "tech-business"
+    url: "https://www.notboring.co/"
+
+  - name: "TLDR"
+    email: "dan@tldrnewsletter.com"
+    category: "tech-news"
+    url: "https://tldr.tech/"
+
+  - name: "Techmeme"
+    email: "newsletter@techmeme.com"
+    category: "tech-news"
+    url: "https://www.techmeme.com/"
+
+  - name: "Axios AI+"
+    email: "ai.plus@axios.com"
+    category: "ai"
+    url: "https://www.axios.com/newsletters/axios-ai-plus"
+
+  - name: "Superhuman"
+    email: "superhuman@mail.joinsuperhuman.ai"
+    category: "ai"
+    url: "https://www.joinsuperhuman.ai/"
+
+  - name: "The Code"
+    email: "thecode@mail.joinsuperhuman.ai"
+    category: "ai"
+    url: "https://www.joinsuperhuman.ai/"
+
+  - name: "Run of Show"
+    email: "tbpn+run-of-show@substack.com"
+    category: "media"
+    url: "https://runofshow.substack.com/"
