@@ -138,7 +138,7 @@ ANTHROPIC_API_KEY=shopify-eyJ...  (your Shopify AI Proxy token)
 ANTHROPIC_BASE_URL=https://proxy.shopify.ai/apis/anthropic
 SLACK_BOT_TOKEN=xoxb-...  (from Step 2.4)
 SLACK_SIGNING_SECRET=...  (from Step 2.4)
-SLACK_CHANNEL_ID=C0AEH7J3T0B  (your #comms-newsletter-intel channel)
+SLACK_CHANNEL_ID=C0XXXXXXX  (your target channel ID)
 ```
 
 ### 3.4 Upload Gmail Credentials
